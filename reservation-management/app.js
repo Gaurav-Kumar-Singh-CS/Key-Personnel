@@ -33,7 +33,7 @@ const reservationsRouter = require('./routes/reservations')
 
 app.use('/reservations', reservationsRouter)
 
-app.listen(1111, () => {
+var server = app.listen(1111, () => {
     axios({
         method: 'POST',
         url: 'http://localhost:7777/register',
@@ -48,3 +48,5 @@ app.listen(1111, () => {
     }).catch((err) => {console.log(err)})
     console.log('Local server started.')
 })
+
+module.exports = server
