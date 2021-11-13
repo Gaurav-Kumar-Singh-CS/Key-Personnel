@@ -1,0 +1,26 @@
+{
+  "name": "guest-management",
+  "version": "1.0.0",
+  "description": "Guest Management Service",
+  "main": "app.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "gaurav",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.24.0",
+    "dotenv": "^10.0.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "mongodb": "^4.1.3",
+    "mongoose": "^6.0.12",
+    "swagger-jsdoc": "^6.1.0",
+    "swagger-ui-express": "^4.1.6"
+  },
+  "devDependencies": {
+    "chai": "^4.3.4",
+    "chai-http": "^4.3.0",
+    "mocha": "^9.1.3"
+  }
+}

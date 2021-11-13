@@ -1,0 +1,11 @@
+{
+  "services": {
+    "guestmanagement": {
+      "apiName": "guestmanagement",
+      "host": "http://localhost",
+      "headers": { "Content-Type": "application/json" },
+      "port": 4444,
+      "url": "http://localhost:4444/"
+    }
+  }
+}
