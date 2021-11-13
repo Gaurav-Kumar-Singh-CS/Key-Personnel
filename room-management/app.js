@@ -33,7 +33,7 @@ const roomsRouter = require('./routes/rooms')
 
 app.use('/rooms', roomsRouter)
 
-app.listen(5555, () => {
+var server = app.listen(5555, () => {
     axios({
         method: 'POST',
         url: 'http://localhost:7777/register',
@@ -48,3 +48,5 @@ app.listen(5555, () => {
     }).catch((err) => {console.log(err)})
     console.log('Local server started.')
 })
+
+module.exports = server
