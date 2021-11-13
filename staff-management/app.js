@@ -34,7 +34,7 @@ const employeesRouter = require('./routes/employees')
 
 app.use('/employees', employeesRouter)
 
-app.listen(3333, () => {
+var server = app.listen(3333, () => {
     axios({
         method: 'POST',
         url: 'http://localhost:7777/register',
@@ -49,3 +49,5 @@ app.listen(3333, () => {
     }).catch((err) => {console.log(err)})
     console.log('Local server started.')
 })
+
+module.exports = server

@@ -26,10 +26,23 @@ router.get('/:id', async(req, res) => {
         }
     catch(err)
         {
-            res.send('Error: ' + err)
+            res.status(404).send('Error: ' + err)
         }
 })
 
+router.get('/name/:name', async(req, res) => {
+    try
+        { 
+            const employees = await Employee.find({name: req.params.name}, function (err, employee) {
+                console.log(employee[0]._id.toString())
+                res.json(employee);
+            }).clone().catch(function(err){ console.log(err)})
+        }
+    catch(err)
+        {
+            res.status(404).send('Error: ' + err)
+        }
+})
 
 router.post('/', async(req, res) => {
     const employee = new Employee({
